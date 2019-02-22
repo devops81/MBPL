@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!--[if IE]>	
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>DevOps Implementation </title>
+    <!-- BOOTSTRAP CORE STYLE CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLE CSS -->
+     <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE CSS -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+</head>
+<body onload="myFunction()"> 
+   
+        <div class="navbar navbar-inverse navbar-fixed-top " >
+        <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand2" href="#"><em class="fa fa-globe"></em>Genpact</a>
+		</div>
+<table>
+<tr><td width=700></td><td><div id="dateDiv">
+	<label align="right" type="text" style="color:white" id="demo"/>
+</div></td></tr>
+</table>
+
+	   <div class="navbar-collapse collapse move-me">
+                <ul class="nav navbar-nav navbar-right set-links">
+                    <li><a href="index.html" class="active-menu-item">HOME</a></li>
+                    <li><a href="cd.html">Continous Integration</a></li>
+                    <li><a href="cm.html">Configuration Management </a></li>
+                     <li><a href="vc.html">Version Control</a></li>
+					 <li><a href="vc.html">QA Automation</a></li>
+					
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!--MENU SECTION END-->
+    <section id="home-sec">  
+		 <table>
+			<tr>
+				<td size="80%"><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DEVOPS IMPLEMENTATION V7.01</h1></td>
+				<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td>
+					<form id="form_id" method="post" name="myform">
+						<table>
+							<tr>
+								<td><label onclick="getUserName()">Welcome &nbsp;&nbsp;</label><label align="right" type="text" style="color:white" id="usernaam"/></td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>&nbsp;</td>
+							</tr>
+						</table>	 
+					</form>
+				</td>
+			</tr>
+		 </table>
+    </section>
+    <!--HOME SECTION END-->
+    <!--SEARCH SECTION END-->
+    <section id="services-sec">
+        <div class="container">
+           <table>
+		   <tr>
+								<td>&nbsp;</td>
+							</tr>
+						</table>	
+		   
+		   
+            <div class="row text-center" >
+<div class="col-md-4"><img src="assets/img/atlassian-bamboo-logo.png" width=126 height="126"/>
+  <h3>BAMBOO/JENKINS for CI/CD</h3>
+</div>
+                <div class="col-md-4"><img src="assets/img/download.png" width=126 height="126"/>
+                  <h4>
+                    bitbucket/github</h4>
+                </div>
+                <div class="col-md-4">
+                  <IMG SRC=assets/img/CONFLUENCE.png height="126" width="126" />
+                  <h4>
+                    CONFLUENCE for Knowledge Management</h4>
+              </div>
+            </div>
+        </div>
+		<div class="col-md-12 set-foot" >
+    &copy 2017 | All rights reserved | Design by : genpact.com
+</div>
+    </section>
+    <script src="assets/js/jquery-1.11.1.js"></script>
+
+<script>
+function myFunction() {
+var currDate = Date().toString().substring(0,15);
+document.getElementById('demo').innerHTML= currDate;
+document.getElementById('usernaam').innerHTML= loggedUser;
+}
+</script>
+
+    <!-- BOOTSTRAP SCRIPTS  -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!-- CUSTOM SCRIPTS  -->
+    <script src="assets/js/custom.js"></script>
+	<script src="js/login.js"></script>
+</body>
+</html>

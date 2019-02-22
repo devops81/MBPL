@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)35.154.85.200:6060/devops_uc/index.html checking commit policy-->
+<html lang="en">
+<script language = "JavaScript1.2">
+
+function validateemail() {
+var x = document.getElementById("email_1").value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+	document.getElementById('errormessage').style.color = "red";
+        document.getElementById("errormessage").innerHTML="Not a valid e-mail address";
+	
+    }
+	
+	else {
+	document.getElementById("errormessage").innerHTML=""; 
+	}
+
+	}
+
+
+	
+
+
+
+
+
+</script> 
+	<head>
+		<meta charset="utf-8">
+
+		<title>Intelligent Framework  the changes</title>
+<!--
+
+Template 2081 Solution
+
+http://www.tooplate.com/view/2081-solution
+
+-->
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+
+		<!-- animate -->
+		<link rel="stylesheet" href="css/animate.min.css">
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<!-- font-awesome -->
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<!-- google font -->
+		<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+		<!-- custom -->
+		<link rel="stylesheet" href="css/style.css">
+		<!-- PopUp -->
+		<link rel="stylesheet" href="dist/remodal.css">
+		<link rel="stylesheet" href="dist/remodal-default-theme.css">	
+		
+		<!-- jQuery -->
+		<script src="js/jquery.js"></script>
+	
+		<!-- bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		
+
+		
+		<!-- PopUp to appear on " Shift + 2 "  of "#" -->
+		<script type = "text/javascript">
+			var keys = {
+				shift: false,
+				two: false
+			};
+			
+			$(document).keydown(function (e) {
+			if (event.keyCode == 27) {
+					$('#myModal1').modal('hide');
+					window.close();
+					}
+			});
+			  $(document).keydown(function (e) {
+				   if (event.keyCode == 16) {
+					keys["shift"] = true;
+				} else if (event.keyCode == 51) {
+					keys["two"] = true;
+				}
+				if (keys["shift"] && keys["two"]) {
+					$('#myModal1').modal('show');
+					keys["shift"] = false;
+				}
+				});
+				$(document).keyup(function(event) {
+				// reset status of the button 'released' == 'false'
+				if (event.keyCode == 16) {
+					keys["shift"] = false;
+				} else if (event.keyCode == 51) {
+					keys["two"] = false;
+				} 
+
+			});
+	</script>
+	</head>
+	<body data-spy="scroll" data-offset="50" data-target=".navbar-collapse">
+
+		<!-- start navigation -->
+		<div class="navbar navbar-fixed-top navbar-default" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+						<span class="icon icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand"><img name="logo" src="images/logo.png"  width=160 class="img-responsive" alt="logo"></a>
+				</div> 
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a data-scroll href="#home" class="smoothScroll">HOME-MENU</a></li>
+						<li><a data-scroll href="#service" class="smoothScroll">OUR SERVICES</a></li>
+						  
+						<!--<<a data-scroll href="#about" class="smoothScroll">ABOUT DEMO</a></li>-->
+						<li><a data-scroll href="#about" class="smoothScroll" data-toggle="modal" data-target="#myModal1">JENKINS/TOMCAT DEMO</a></li>
+						<li><a data-scroll href="#contact" class="smoothScroll" id="contact-sanjeeb">Contact-us</a></li>
+						<li><a data-scroll href="#newsletter" class="smoothScroll" id="newsID">IntelliGEN-V.14NOV2017</a></li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- end navigationss -->
+
+		<!-- start home -->
+		<section id="home" class="text-center">
+		  <div class="templatemo_headerimage">
+		    <div class="flexslider">
+		      <ul class="slides">
+		        <li>
+		        	<img src="images/slider/slide1.jpg" alt="Slide 1">
+		        	<div class="slider-caption">
+					    <div class="templatemo_homewrapper"><br><br><br><br><br><br><br><br><br>
+					      <h1 class="wow fadeInDown" data-wow-delay="6000000">IntelliGen Framework 1.0</h1>
+					      <h2 class="wow fadeInDown" data-wow-delay="6000000">
+							<span>Taking your organization towards DevOps culture</span>
+						</h2>
+						
+					    </div>
+				  	</div>
+		        </li>
+		        <li>
+		        	<img src="images/slider/2.jpg" alt="Slide 2">
+		        	<div class="slider-caption">
+					    <div class="templatemo_homewrapper">
+					      <h1 class="wow fadeInDown" data-wow-delay="6000000">IntelliGen Framework 1.0</h1>
+					      <h2 class="wow fadeInDown" data-wow-delay="6000000">
+							<span>PLUG AND PLAY - CUSTOMISABLE - FLEXIBLE</span>
+						</h2>
+						<p>Solution customized as per organization need</p>
+						<a href="#about" class="smoothScroll btn btn-default wow fadeInDown" data-wow-delay="2000">See about us</a>	
+					    </div>
+				  	</div>
+		        </li>
+		      </ul>
+		    </div>
+		  </div>				
+		</section>
+		<!-- end home -->
+<!-- start service -->
+
+		<div id="service">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-4">
+						<div class="media">
+							<div class="media-object media-left wow fadeIn" data-wow-delay="0.1s">
+								<img src="images/jenkinslogo.png"  height=70 width=70>
+							</div>
+							<div class="media-body wow fadeIn">
+								<h3 class="media-heading">Continuous IntegrationS and Deployment</h3>
+								<p>As part of Continuous Integration and Deployment we do 
+build and deployment of the codebase across the environment by using the 
+market leading CI tools like bamboo,jenkins,urban code.
+
+Includes Integration of plugins and tools for deployment and test coverage 
+activities</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="media">
+							<div class="media-object media-left wow fadeIn" data-wow-delay="0.3s">
+								<img src="images/awslogo.png" height=70 width=70> </img>
+							</div>
+							<div class="media-body wow fadeIn">
+								<h3 class="media-heading">AWS Cloud services</h3>
+								<p>Automation of deployment on aws environment using aws code deploy application that can be deployed on
+Amazon Servers and store revisions automatically into S3 storage
+Configuration/implementation  of end-to-end devops on cloud </p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="media">
+							<div class="media-object media-left wow fadeIn" data-wow-delay="0.6s">
+								<img src="images/cloverlogo.jpg" height=50 width=70>
+							</div>
+							<div class="media-body wow fadeIn" data-wow-delay="0.3s">
+								<h3 class="media-heading">QA automation/Integration </h3>
+								<p>Automation of QA process and integration of tools clover,selenium with existing devops process, helping in generating dynamic test reports in early phase of development and along with the build</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="media">
+							<div class="media-object media-left wow fadeIn" data-wow-delay="0.9s">
+								<img src="images/gitlogo.jpg"  height=50 width=70></img>
+							</div>
+							<div class="media-body wow fadeIn" data-wow-delay="0.6s">
+								<h3 class="media-heading">Source Code Management</h3>
+								<p>End-to-End Migration of existing source code system to newer one with post implementation support</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-sm-4">
+						<div class="media">
+							<div class="media-object media-left wow fadeIn" data-wow-delay="0.4s">
+							<img src="images/plugin.jpg"  height=50 width=70></img>
+							</div>
+							<div class="media-body wow fadeIn" data-wow-delay="0.3s">
+							
+								<h3 class="media-heading">Plugin Development</h3>
+								<p>Customized plugin development around Jira,Bamboo,Jenkins for specific needs</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="media">
+							<div class="media-object media-left wow fadeIn" data-wow-delay="0.6s">
+								<img src="images/cloverlogo.jpg" height=50 width=70>
+							</div>
+							<div class="media-body wow fadeIn" data-wow-delay="0.3s">
+								<h3 class="media-heading">Database continous Integration </h3>
+								<p>Helps to compare the database for different environment 
+and deploy the same automatically post commit.
+can easily be integrated with CI tools and generate database
+update sqls,difference report and database deploy package that can
+be rollbacked easily and database totally comes under version 
+control so it helps to track all the changes and history</p>
+							</div>
+						</div>
+					</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end service -->
+
+		<!-- start divider -->
+		
+		<!-- end divider -->
+
+		<!-- start about -->
+		<div id="about">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 wow fadeInLeft" data-wow-delay="0.9s">
+						<h3>Intelligen FrameWork changing</h3>
+						
+						<p>Intelligen framework is tend towards providing enterprise to adopt to DevOps culture and make their existing process more transparent and efficent by making them adopted to latest DevOps tools and methodology </p>
+						<p> Some of the salient features of the frameworks</p>
+						<li> End-to-End CI/CD solution for their existing devlopment process
+						<li> QA automation and Integration with other tools 
+						<li> Source code managemnet and branching methodology
+						<li> Report generation for each the phases for better transperency 
+						<li> Customized plugin devlopment for tools like Jira,Bamboo,Jenkins
+					</div>
+					<div class="col-md-6 col-sm-6 wow fadeInRight" data-wow-delay="0.9s">
+					
+					<div class="video-wrapper">
+    <video width=550 height="340" src="images/demovideo-v2.mp4">Test</video>
+</div>
+					
+ 
+  
+
+				
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end about -->
+
+		
+		<!-- start newsletter -->
+		<div id="newsletter">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="title">
+							<h2 class="wow bounce">Get our newsletter!</h2>
+							<p class="wow fadeIn" data-wow-delay="0.6s">To keep you updated with latest on DevOps market standard tools and methodologies</p>
+						</div>
+						<form action="#" method="get" class="wow fadeInUp" data-wow-delay="0.9s">
+							<div class="col-md-3 col-sm-3"></div>
+							<div class="col-md-4 col-sm-4">
+								<input name="email" type="email" class="form-control" id="email" placeholder="Enter your email">
+							</div>
+							<div class="col-md-2 col-sm-2">
+								<input name="submit" type="submit" class="form-control" id="submit" value="Sign Up">
+							</div>
+							<div class="col-md-3 col-sm-3"></div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end newsletter -->
+
+		<!-- start pricing -->
+<!-- end pricing -->
+
+		
+		<!-- start contact -->
+		<div id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-sm-4 wow fadeInLeft" data-wow-delay="0.6s">
+						
+					</div>
+					<div class="col-md-3 col-sm-4 wow fadeIn" data-wow-delay="0.9s">
+						<address>
+							<h3>Visit Office</h3>
+							<p><i class="fa fa-map-marker too-icon"></i> GenPact Headstrong NOIDA D4</p>
+							<p><i class="fa fa-phone too-icon"></i> 010-010-0220</p>
+							<p><i class="fa fa-envelope-o too-icon"></i> devops@genpact.com</p>
+						</address>
+					</div>
+					<form action="#" method="post" class="col-md-6 col-sm-4" id="contact-form" role="form">
+							<div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
+								<input name="name" type="text" class="form-control" id="name" placeholder="Name">
+
+							</div>
+							<div class="col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
+								<input name="email" type="email" class="form-control" id="email_1" placeholder="Email" onblur="validateemail()">
+								<label for="name" id="errormessage"></label>
+							</div>
+							<div class="col-md-12 col-sm-12 wow fadeIn" data-wow-delay="0.9s">
+								<textarea name="message" rows="5" class="form-control" id="message" placeholder="Message"></textarea>
+							</div>
+							<div class="col-md-offset-9 col-md-3 col-sm-6 wow fadeIn" data-wow-delay="0.3s">
+								<input name="submit" type="submit" class="form-control" id="submit" value="Send">
+							</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- end contact -->
+		
+		<!-- start google map -->
+		<div class="google_map">
+			<div id="map-canvas"></div>
+		</div>
+		<!-- end google map -->
+
+		  <!-- Modal of PopUp -->
+			  <div class="modal fade" id="myModal1" role="dialog">
+				<div class="modal-dialog modal-md">
+				  <div class="modal-content">
+					<div class="modal-header">
+					  <button type="button" class="close" data-dismiss="modal">&times;</button>
+					  <h4 class="modal-title" style="text-align:center">Customer Profile</h4>
+					</div>
+					<div class="modal-body" style="text-align:center">
+						<table style="height: 108px;" width="288">
+							<tbody>
+							<tr>
+							<td style="width: 140px;">Name</td>
+							<td style="width: 132.667px;"> <input type="text" name="cstName"><br></td>
+							</tr>
+							<tr>
+							<td style="width: 140px;">Phone #</td>
+							<td style="width: 132.667px;"> <input type="text" name="cstPhoneNumber"><br></td>
+							</tr>
+							<tr>
+							<td style="width: 140px;">Loan ID:</td>
+							<td style="width: 132.667px;"> <input type="text" name="cstLoanID"><br></td>
+							</tr>
+							<tr>
+							<td style="width: 140px;">Insurance Type :</td>
+							<td style="width: 132.667px;"><select>
+							  <option value="volvo">Life Insurance</option>
+							  <option value="saab">Health Insurance</option>
+							  <option value="mercedes">Home Insurance</option>
+							  <option value="audi">Travel Insurance</option>
+							</select></td>
+							</tr>
+							</tbody>
+							</table>
+					   </br>
+					   </br>
+					  <p>Press # to open this window. As an end user you can now reach to this screen using the shortcut key as well.!</p>
+					</div>
+					<div class="modal-footer" style="text-align:center">
+					<button data-remodal-action="cancel"  data-dismiss="modal" class="remodal-cancel">Cancel</button>
+					<button data-remodal-action="confirm"  data-dismiss="modal" class="remodal-confirm">OK</button>
+					</div>
+				  </div>
+				</div>
+			  </div>
+		<!-- end Modal of PopUp -->
+		
+		<!-- start footer -->
+		<footer>
+
+		</footer>
+		<!-- end footer -->
+
+
+		
+		<!-- scroll navigation new -->
+		<script src="js/scroll.js"></script>
+		<!-- isotope -->
+		<script src="js/isotope.js"></script>
+		<!-- images loaded -->
+   		<script src="js/imagesloaded.min.js"></script>
+   		<!-- wow -->
+		<script src="js/wow.min.js"></script>
+		<!-- smoothScroll -->
+		<script src="js/smoothscroll.js"></script>
+		<!-- jquery flexslider -->
+		<script src="js/jquery.flexslider.js"></script>
+		<!-- custom -->
+		<script src="js/custom.js"></script>
+
+	</body>
+</html>

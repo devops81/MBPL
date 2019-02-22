@@ -1,0 +1,4 @@
+{  
+    "sonarHost": "http://35.154.156.155:9000/sonar",
+    "sonarProjectKey": "org.glassfish.jersey.examples:webapp-example-parent"
+}

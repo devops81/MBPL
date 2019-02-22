@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+# Copy all files to /home/ec2-user/test
+files:
+  - source: /
+    destination: /home/ec2-user/test
+
+permissions:
+   - object: /home/ec2-user/test
+     pattern: "**"
+     mode: 755
+     type:
+       - file
+
+hooks:
+AfterInstall:
+   - location: examples/feed-combiner-java8-webapp/artifact-deploy.sh
+     runas: root
