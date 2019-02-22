@@ -1,6 +1,6 @@
             pipeline {
                 agent {
-                    label "devops814"
+                    label "master"
                 }
                 tools {
                     maven 'Maven3'
