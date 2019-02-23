@@ -63,6 +63,12 @@
 											}
                                   
 													}
+				   stage ('Sending Slack notification')
+				   {
+						steps {
+						slackSend channel: 'jbuildnotification', message: 'good', teamDomain: 'devops81', tokenCredentialId: 'JBN'
+						}
+						}
 						  
              
                     
