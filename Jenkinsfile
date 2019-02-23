@@ -46,11 +46,11 @@
                                           
                                            'calling Job one' :
                                   {                  
-                                    build 'Job-One' 
+                                    build 'BR_devam/job-1' 
                                  },
                                            'Calling job two' :
                                   {                  
-                                         build 'Job-Two'  
+                                         build 'BR_devam/job-02'  
                                  }
                                  )
                         } 
