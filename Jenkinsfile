@@ -81,10 +81,14 @@
                             label "master"
                         }
                         steps {
-                           emailext body: '${SCRIPT,template="email.groovy.template"}', 
-				   subject: '$DEFAULT_SUBJECT', 
-				   to: 'devops81@gmail.com'
-            
+                     	def mailRecipients = "devops81@gmail.com"
+    			def jobName = currentBuild.fullDisplayName
+    			emailext body: '''${SCRIPT, template="email.groovy.template"}''',
+        		mimeType: 'text/html',
+        		subject: "[Jenkins] ${jobName}",
+        		to: "${mailRecipients}",
+        		replyTo: "${mailRecipients}",
+        		recipientProviders: [[$class: 'CulpritsRecipientProvider']]
                             
                         }
                     }
