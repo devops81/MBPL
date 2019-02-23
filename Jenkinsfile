@@ -102,7 +102,7 @@
 				steps { 
 					echo "You are in NewBranch" 
 				      }
-				
+				}
                   
                  }
 		    post {
