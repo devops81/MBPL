@@ -56,7 +56,7 @@
                         } 
                     }
                     stage ('Deploy the application') {
-                        steps {
+                     
                                     parallel (
                                                 'copying the war file' {
                            
@@ -68,9 +68,9 @@
                                                 }
                                                 
                             
-             )
+											)
              
-                    }
+                    
                     stage ('Send out email Notification') {
                         agent {
                             label "master"
@@ -85,7 +85,7 @@
                   
                 }
                     
-            }
+               }
 			
 			
 			}
