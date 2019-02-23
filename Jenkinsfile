@@ -80,22 +80,16 @@
                         agent {
                             label "master"
                         }
-                        steps {
-                     	def mailRecipients = "devops81@gmail.com"
-    			def jobName = currentBuild.fullDisplayName
-    			emailext body: '''${SCRIPT, template="email.groovy.template"}''',
-        		mimeType: 'text/html',
-        		subject: "[Jenkins] ${jobName}",
-        		to: "${mailRecipients}",
-        		replyTo: "${mailRecipients}",
-        		recipientProviders: [[$class: 'CulpritsRecipientProvider']]
+                  steps {
+                     	echo "under send email step"
                             
                         }
                     }
                     
                   
-                 }
-				}
+                }
+		
+	    }
                     
                
 			
