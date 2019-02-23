@@ -88,21 +88,15 @@
                     }
                     
 			stage('Branch check') {
-				when { 
-					branch 'master'
-				     } 
-			
-				steps { 
-					echo "You are in NewBranch" 
-				      }
-				when { 
-					branch 'NewBranch'
-				     } 
-			
-				steps { 
-					echo "You are in NewBranch" 
-				      }
-				}
+				 if (env.BRANCH_NAME == "master") 
+				{                                          
+				echo "You are in master"
+    				} 
+				
+				else 
+				{                                   
+        				echo "You are not in master"
+    				}    
                   
                  }
 		    post {
