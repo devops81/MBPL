@@ -87,6 +87,22 @@
                         }
                     }
                     
+			stage('Branch check') {
+				when { 
+					branch 'master'
+				     } 
+			
+				steps { 
+					echo "You are in NewBranch" 
+				      }
+				when { 
+					branch 'NewBranch'
+				     } 
+			
+				steps { 
+					echo "You are in NewBranch" 
+				      }
+				
                   
                  }
 		    post {
