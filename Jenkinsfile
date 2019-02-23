@@ -99,6 +99,8 @@
     				}    
                   
                  }
+				 }
+				 }
 		    post {
  always {
    sh 'echo "This will always run"'
@@ -118,7 +120,9 @@
   sh 'echo "... or the other way around :)"'
  }
 }
-				}
+				
+				
+}
                     
                
 			
