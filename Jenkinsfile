@@ -25,7 +25,7 @@
                     
                     stage ('Build the project') {
                         steps {
-                            dir("/var/lib/jenkins/workspace/Pipeline-Slack-Example/examples/feed-combiner-java8-webapp") {
+                            dir("/var/lib/jenkins/workspace/Pipeline-Slack-Example/examples/feed-combiner-java8-webapps") {
                          sh 'mvn clean install'
                             }
                             
