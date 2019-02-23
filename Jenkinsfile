@@ -61,14 +61,15 @@
                                                 'copying the war file' {
                            
                             sh 'cp  -rf  /var/lib/jenkins/workspace/Pipeline-Slack/examples/feed-combiner-java8-webapp/target/devops.war /home/jarfile'
-                                                }
+                                                },
                                                 'sending the slack notificaiton'
                                                 {
                                                             slackSend channel: 'jbuildnotification', message: 'good', teamDomain: 'devops81', tokenCredentialId: 'JBN'
                                                 }
                                                 
                             
-                        }
+             )
+             }
                     }
                     stage ('Send out email Notification') {
                         agent {
@@ -83,9 +84,9 @@
                     
                   
                 }
-                
-                
+                    
             }
+            
                    
                     
                         
