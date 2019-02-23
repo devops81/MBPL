@@ -66,7 +66,11 @@
 				   stage ('Sending Slack notification')
 				   {
 						steps {
-						slackSend channel: 'jbuildnotification', message: 'good', teamDomain: 'devops81', tokenCredentialId: 'JBN'
+						slackSend baseUrl: 'https://hooks.slack.com/services/', 
+						channel: 'devops81', 
+						color: 'good', 
+						message: 'started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)', teamDomain: 'devops81', 
+						tokenCredentialId: 'JBN'
 						}
 						}
 						  
