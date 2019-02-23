@@ -25,7 +25,7 @@
                     
                     stage ('Build the project') {
                         steps {
-                            dir("/home/jenkins/node/workspace/Parallel-Execution-Example/examples/feed-combiner-java8-webapp") {
+                            dir("/var/lib/jenkins/workspace/Pipeline-Slack/examples/feed-combiner-java8-webapp") {
                          sh 'mvn clean install'
                             }
                             
@@ -58,7 +58,7 @@
                     stage ('Deploy the application') {
                         steps {
                            
-                            sh 'cp  -rf  /home/jenkins/node/workspace/Parallel-Execution-Example/examples/feed-combiner-java8-webapp/target/devops.war /home/jarfile'
+                            sh 'cp  -rf  /var/lib/jenkins/workspace/Pipeline-Slack/examples/feed-combiner-java8-webapp/target/devops.war /home/jarfile'
                             
                         }
                     }
