@@ -58,19 +58,15 @@
                     stage ('Deploy the application') {
                      
                                       steps {
-                              parallel ( 
-                                  'Deploy the application': 
-                        {
+                              
+                                  
+                        
                              sh 'cp  -rf  /var/lib/jenkins/workspace/Pipeline-Slack/examples/feed-combiner-java8-webapp/target/devops.war /home/jarfile'
                             
-                        },
-                                  'Send Slack notification' :
-                                  {                  
-                                     slackSend channel: 'jbuildnotification', message: 'good', teamDomain: 'devops81', tokenCredentialId: 'JBN'
-                                 }
-                                 )
                         }
-						  }
+                                  
+                        }
+						  
              
                     
                     stage ('Send out email Notification') {
