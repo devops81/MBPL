@@ -88,7 +88,9 @@
                     }
                     
 			stage('Branch check') {
-				echo "Branch check"
+				steps
+				{
+					echo "Branch check" }
                   
                  }
 				 }
