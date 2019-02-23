@@ -81,7 +81,7 @@
                             label "master"
                         }
                         steps {
-                            emailext body: '$DEFAULT_CONTENT', subject: '$DEFAULT_SUBJECT', to: 'devops81@gmail.com'
+                           emailext body: 'This is the body of email', subject: 'DUMMY EMAIL', to: 'devops81@gmail.com'
             
                             
                         }
