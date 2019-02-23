@@ -69,7 +69,7 @@
                                                 
                             
              )
-             }
+             
                     }
                     stage ('Send out email Notification') {
                         agent {
@@ -86,6 +86,9 @@
                 }
                     
             }
+			
+			
+			}
             
                    
                     
