@@ -81,10 +81,8 @@
                             label "master"
                         }
                         steps {
-                     	 emailext body: 'This is the body of email', subject: 'DUMMY EMAIL', to: 'devops81@gmail.com'
-                           emailext body: '${SCRIPT,template="email.groovy.template"}', mimeType: 'text/html',
-							subject: '$DEFAULT_SUBJECT', 
-							to: 'devops81@gmail.com'
+                     	
+                         emailext body: '${SCRIPT,template="email.groovy.template"}', mimeType: 'text/html', subject: '$Defualt_Subject', to: 'devops81@gmail.com'
                             
                         }
                     }
