@@ -57,15 +57,12 @@
                     }
                     stage ('Deploy the application') {
                      
-                                      steps {
-                              
-                                  
-                        
-                             sh 'cp  -rf  /var/lib/jenkins/workspace/Pipeline-Slack/examples/feed-combiner-java8-webapp/target/devops.war /home/jarfile'
+                                      steps {          
+											sh 'cp  -rf  /var/lib/jenkins/workspace/Pipeline-Slack/examples/feed-combiner-java8-webapp/target/devops.war /home/jarfile'
                             
-                        }
+											}
                                   
-                        }
+													}
 						  
              
                     
@@ -81,7 +78,8 @@
                     }
                     
                   
-                }
+                 }
+				}
                     
                
 			
