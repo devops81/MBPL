@@ -82,6 +82,13 @@
 						tokenCredentialId: 'JBN'
 						}
 						}
+			
+			 stage ('Branch check') {
+				 when { branch 'master' }
+                        steps {
+                          echo "You are in master branch ${env.BRANCH_NAME}"  
+                        }
+                    }
 						  
              
                     
