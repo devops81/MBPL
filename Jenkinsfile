@@ -68,7 +68,7 @@
 						steps {
 						slackSend baseUrl: 'https://hooks.slack.com/services/', 
 						channel: 'jbuildnotification', 
-						color: 'danger', 
+						color: 'good', 
 						message: "started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'devops81', 
 						tokenCredentialId: 'JBN'
 						}
@@ -88,8 +88,7 @@
                     }
                     
 			stage('Branch check') {
-				steps
-				{
+			
 					when
 					{ 
 					branch 'master'
@@ -97,7 +96,7 @@
 					steps {
 					echo "You are in master branch"
 					}
-				}
+				
                   
                  }
 				 }
@@ -121,4 +120,16 @@
   sh 'echo "... or the other way around :)"'
  }
 }
+				
+				
 }
+                    
+               
+			
+			
+			
+            
+                   
+                    
+                        
+            
