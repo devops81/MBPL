@@ -86,12 +86,7 @@
 						}
 						}
 			
-			 stage ('Branch check') {
-				 
-                        steps {
-                          echo "You are in master branch ${env.BRANCH_NAME}"  
-                        }
-                    }
+			
 						  
              
                     
@@ -106,7 +101,12 @@
                         }
                     }
 					
-				
+			 stage ('Branch check') {
+				 
+                        steps {
+                          echo "You are in master branch ${env.BRANCH_NAME}"  
+                               }
+                                                 }	
                     
 			
 				 }
