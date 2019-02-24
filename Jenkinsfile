@@ -90,15 +90,13 @@
 			stage('Branch check') {
 				steps
 				{
-					if (env.BRANCH_NAME == "master") 
-				{                                          
-				echo "You are in master"
-    				} 
-				
-				else 
-				{                                   
-        				echo "You are not in master"
-    				}   
+					when
+					{ 
+					branch 'master'
+					}
+					steps {
+					echo "You are in master branch"
+					}
 				}
                   
                  }
@@ -123,16 +121,4 @@
   sh 'echo "... or the other way around :)"'
  }
 }
-				
-				
 }
-                    
-               
-			
-			
-			
-            
-                   
-                    
-                        
-            
