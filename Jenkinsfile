@@ -15,6 +15,15 @@
                             '''
                         }
                     }
+					
+					stage ('Initialize2') {
+                        steps {
+                            sh '''
+                                echo "PATH = $PATH"
+                                echo "M2_HOME = $M2_HOME"
+                            '''
+                        }
+                    }
             
                     stage ('Checkout') {
                         steps {
@@ -88,11 +97,6 @@
                     }
 					
 				
-                    stage ('Branch check') {
-                        steps {
-                          echo 'You are in master branch'
-                        }
-                    }
                     
 			
 				 }
