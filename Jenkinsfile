@@ -89,12 +89,9 @@
                     
 			stage('Branch check') {
 			
-					when
-					{ 
-					branch 'DPLExample'
-					}
+					
 					steps {
-					echo "You are in master branch"
+					echo "You are in master branch ${env.BRANCH_NAME}"
 					}
 				
                   
