@@ -68,7 +68,7 @@
 						steps {
 						slackSend baseUrl: 'https://hooks.slack.com/services/', 
 						channel: 'jbuildnotification', 
-						color: 'good', 
+						color: 'danger', 
 						message: "started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'devops81', 
 						tokenCredentialId: 'JBN'
 						}
