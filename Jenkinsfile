@@ -27,7 +27,10 @@
             
                     stage ('Checkout') {
                         steps {
-                            checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/devops81/MBPL.git']]])
+                            checkout([$class: 'GitSCM', branches: [[name: '*/master']], 
+				      doGenerateSubmoduleConfigurations: false, extensions: [], 
+				      submoduleCfg: [], 
+				      userRemoteConfigs: [[url: 'https://github.com/devops81/MBPL.git']]])
                             
                         }
                     }
@@ -84,7 +87,7 @@
 						}
 			
 			 stage ('Branch check') {
-				 when { branch 'master' }
+				 
                         steps {
                           echo "You are in master branch ${env.BRANCH_NAME}"  
                         }
