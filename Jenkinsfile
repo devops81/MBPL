@@ -91,7 +91,7 @@
 			
 					when
 					{ 
-					branch 'master'
+					branch 'DPLExample'
 					}
 					steps {
 					echo "You are in master branch"
