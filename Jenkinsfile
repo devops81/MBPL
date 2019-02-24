@@ -87,7 +87,7 @@
                         }
                     }
 					
-					stages {
+				
                     stage ('Branch check') {
                         steps {
                           echo "You are in master branch ${env.BRANCH_NAME}"  
