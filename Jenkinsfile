@@ -116,7 +116,7 @@
  failure {
  slackSend baseUrl: 'https://hooks.slack.com/services/', 
 	  channel: 'jenkinsjobalert', color: 'danger', 
-	  message: "started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", 
+	  message: "Build FAILED ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", 
 	  teamDomain: 'devops81', 
 	  tokenCredentialId: '22519'
  }
