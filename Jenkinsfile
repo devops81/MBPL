@@ -37,7 +37,7 @@
                     
                     stage ('Build the project') {
                         steps {
-                            dir("/var/lib/jenkins/workspace/SLACKINTEGRATION/examples/feed-combiner-java8-webapp") {
+                            dir("/var/lib/jenkins/workspaces/SLACKINTEGRATION/examples/feed-combiner-java8-webapp") {
                          sh 'mvn clean install'
                             }
                             
@@ -75,16 +75,7 @@
 											}
                                   
 													}
-				   stage ('Sending Slack notification')
-				   {
-						steps {
-						slackSend baseUrl: 'https://hooks.slack.com/services/', 
-						channel: 'jbuildnotification', 
-						color: 'good', 
-						message: "started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", teamDomain: 'devops81', 
-						tokenCredentialId: 'JBN'
-						}
-						}
+				 
 			
 			
 						  
