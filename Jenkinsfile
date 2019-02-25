@@ -27,7 +27,7 @@
             
                     stage ('Checkout') {
                         steps {
-                            checkout([$class: 'GitSCM', branches: [[name: '*/master']], 
+                            checkout([$class: 'GitSCM', branches: [[name: '*/22519']], 
 				      doGenerateSubmoduleConfigurations: false, extensions: [], 
 				      submoduleCfg: [], 
 				      userRemoteConfigs: [[url: 'https://github.com/devops81/MBPL.git']]])
