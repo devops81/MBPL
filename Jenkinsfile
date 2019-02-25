@@ -37,7 +37,7 @@
                     
                     stage ('Build the project') {
                         steps {
-                            dir("/var/lib/jenkins/workspaces/SLACKINTEGRATION/examples/feed-combiner-java8-webapp") {
+                            dir("/var/lib/jenkins/workspace/SLACKINTEGRATION/examples/feed-combiner-java8-webapp") {
                          sh 'mvn clean install'
                             }
                             
