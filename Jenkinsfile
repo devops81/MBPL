@@ -116,10 +116,18 @@
    sh 'echo "This will always run"'
  }
  success {
-  sh 'echo "This will run only if successful"'
+  slackSend baseUrl: 'https://hooks.slack.com/services/', 
+	  channel: 'jenkinsjobalert', color: 'green', 
+	  message: "started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", 
+	  teamDomain: 'devops81', 
+	  tokenCredentialId: '22519'
  }
  failure {
-  sh 'echo "This will run only if failed"'
+ slackSend baseUrl: 'https://hooks.slack.com/services/', 
+	  channel: 'jenkinsjobalert', color: 'danger', 
+	  message: "started ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)", 
+	  teamDomain: 'devops81', 
+	  tokenCredentialId: '22519'
  }
  unstable {
   sh 'echo "This will run only if the run was marked as unstable"'
